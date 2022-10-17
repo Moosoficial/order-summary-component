@@ -6,6 +6,7 @@
   --Very-pale-blue: hsl(225, 100%, 98%);
   --Desaturated-blue: hsl(224, 23%, 55%);
   --Dark-blue: hsl(223, 47%, 23%);
+  --red-hat-display: "Red Hat display", sans-serif;
 }
 
 * {
@@ -22,47 +23,71 @@
   color: hsl(228, 45%, 44%);
 }
 
+button{
+  border: none;
+  background: none;
+  width: 100%;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 12px 24px;
+  font-family: var(--red-hat-display);
+}
+
 body {
-  font-family: "Red Hat display", sans-serif;
+  font-family: var(--red-hat-display);
   background-color: var(--Pale-blue);
   background-image: url(./images/pattern-background-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.container {
+.main__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card__order{
   overflow: hidden;
-  width: 328px;
-  height: 570px;
-  margin: 70px auto;
+  width: 320px;
   border-radius: 20px;
   background-color: white;
 }
 
+
 .imagen {
   background-image: url(./images/illustration-hero.svg);
-  height: 162px;
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 100%;
+}
+
+.card__order-info{
+    padding: 15px 20px;
 }
 
 .title__central {
   text-align: center;
   font-weight: 900;
   font-size: 1.4em;
-  margin: 24px 0;
+  margin: 15px 0;
   color: var(--Dark-blue);
 }
 
 .parrafo {
   text-align: center;
   color: var(--Desaturated-blue);
-  margin-bottom: 32px;
-  padding: 0 30px;
+  margin: 20px 0;
+  line-height: 1.6rem;
 }
 
 .plan__annual {
-  width: 280px;
-  height: 82px;
+  width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -80,12 +105,12 @@ body {
 
 .content__precio p:nth-child(1) {
   color: var(--Dark-blue);
-  font-size: 0.9em;
+  font-size: 1rem;
   font-weight: 900;
 }
 .content__precio p:nth-child(2) {
   color: var(--Desaturated-blue);
-  font-size: 0.9em;
+  font-size: 16px;
 }
 
 .change {
@@ -97,75 +122,48 @@ body {
 
 .change:hover {
   text-decoration: none;
-  color: var(--Desaturated-blue);
+  color: hsl(245, 100%, 76%);
 }
 
-.botton__payment {
+.button__primary{
   background-color: var(--Bright-blue);
-  width: 280px;
-  border: none;
-  height: 53px;
-  color: var(--Very-pale-blue);
-  display: block;
-  margin: 0 auto;
-  font-weight: 900;
-  font-size: 0.9em;
-  margin-bottom: 18px;
+  color: white;
   border-radius: 10px;
-  box-shadow: 1px 10px 8px 3px var(--Pale-blue);
+  font-weight: 800;
+  box-shadow: 1px 5px 17px 3px var(--Desaturated-blue);
 }
 
-.botton__payment:hover {
-  background-color: var(--Desaturated-blue);
+.button-secondary{
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+}
+
+.button__primary:hover {
+  background-color: hsl(246, 100%, 70%);
   cursor: pointer;
 }
 
-.botton__cancel {
-  text-align: center;
-}
-.cancelar {
-  text-decoration: none;
-  font-size: 0.9em;
-  font-weight: 900;
-  color: var(--Desaturated-blue);
+.button-secondary:hover{
+  color: var(--Bright-blue);
 }
 
-.cancelar:hover {
-  color: var(--Dark-blue);
-}
-
-@media (min-width:944px) {
+@media (min-width:1440px) {
   body {
     background-image: url(./images/pattern-background-desktop.svg);
-    background-repeat: no-repeat;
+    background-position: top;
     background-size: contain;
   }
 
-  .container {
-    width: 408px;
-    height: 632px;
-    margin-bottom: 80px;
+  .card__order{
+    width: 420px;
+    border-radius: 20px;
+    background-color: white;
   }
 
-  .title__central {
-    margin: 48px 0 24px;
-  }
+  .card__order-info{
+    padding: 15px 40px;
+    text-align: center;
+}
 
-  .parrafo {
-    margin-bottom: 20px;
-  }
-
-  .plan__annual {
-    width: 316px;
-    height: 91px;
-    padding: 0 10px;
-    margin-bottom: 28px;
-  }
-  .change {
-    margin-left: 60px;
-  }
-  .botton__payment {
-    width: 335px;
-    margin-bottom: 32px;
-  }
+  
 }
