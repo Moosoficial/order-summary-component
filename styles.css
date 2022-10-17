@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Red Hat display", sans-serif;
+  background-color: var(--Pale-blue);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  overflow: hidden;
+  width: 328px;
+  height: 570px;
+  margin: 164px auto;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.imagen {
+  background-image: url(./images/illustration-hero.svg);
+  height: 162px;
+  background-size: cover;
+}
+
+.title__central {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.4em;
+  margin: 24px 0;
+  color: var(--Dark-blue);
+}
+
+.parrafo {
+  text-align: center;
+  color: var(--Desaturated-blue);
+  margin-bottom: 32px;
+  padding: 0 30px;
+}
+
+.plan__annual {
+  width: 280px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto 28px;
+  border-radius: 10px;
+  background-color: var(--Very-pale-blue);
+}
+
+.icon__container {
+  background-image: url(./images/icon-music.svg);
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+}
+
+.content__precio p:nth-child(1) {
+  color: var(--Dark-blue);
+  font-size: 0.9em;
+  font-weight: 900;
+}
+.content__precio p:nth-child(2) {
+  color: var(--Desaturated-blue);
+  font-size: 0.9em;
+}
+
+.change {
+  font-size: 0.8em;
+  color: var(--Bright-blue);
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+.change:hover {
+  text-decoration: none;
+  color: var(--Desaturated-blue);
+}
+
+.botton__payment {
+  background-color: var(--Bright-blue);
+  width: 280px;
+  border: none;
+  height: 53px;
+  color: var(--Very-pale-blue);
+  display: block;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 0.9em;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  box-shadow: 1px 10px 8px 3px var(--Pale-blue);
+}
+
+.botton__payment:hover {
+  background-color: var(--Desaturated-blue);
+  cursor: pointer;
+}
+
+.botton__cancel {
+  text-align: center;
+}
+.cancelar {
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 900;
+  cursor: pointer;
+  color: var(--Desaturated-blue);
+}
+
+.cancelar:hover {
+  text-decoration: none;
+  color: var(--Dark-blue);
+}
+
+@media (min-width: 944px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-size: contain;
+  }
+
+  .container {
+    width: 450px;
+    height: 699px;
+    margin-bottom: 50px;
+  }
+
+  .imagen {
+    height: 220px;
+  }
+
+  .title__central {
+    font-size: 1.8em;
+    margin: 45px 0 20px;
+  }
+
+  .parrafo {
+    margin-bottom: 25px;
+    padding: 0 50px;
+    line-height: 25px;
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+  }
+
+  .plan__annual {
+    width: 326px;
+    height: 91px;
+    padding: 0 10px;
+    margin-bottom: 33px;
+  }
+  .change {
+    font-size: 0.9em;
+    margin-left: 60px;
+    font-weight: 900;
+  }
+  .botton__payment {
+    width: 340px;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .cancelar {
+    font-size: 1em;
+    font-weight: 900;
+  }
+
+  .content__precio p:nth-child(1) {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: 900;
+  }
+
+  .content__precio p:nth-child(2) {
+    font-size: 1em;
+  }
+}
